@@ -7,41 +7,64 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
 export async function getStaticPaths() {
-  return ["en", "fr", "es"].map((lang) => {
+  return ["en", "km"].map((lang) => {
     return { params: { lang } };
   });
 }
 ---
 
+
 <Layout title={t("site.title")} description={t("site.description")} lang={lang}>
-  <h1>{t("home.welcome")}</h1>
-  <p>
-    {t("home.p1")}
-  </p>
-  <p>
-    {t("home.p2")}
-  </p>
-  <p>{t("home.p3")}</p>
-  <ul>
-    <li>{t("home.p3.0")} <code>src/i18n/ui.ts</code></li>
-    <li>{t("home.p3.1")} <code>src/pages/index.astro</code></li>
-    <li>{t("home.p3.2")} <code>src/pages/[lang]/...</code></li>
-    <li>
-      {t("home.p3.3")}
-      <code>src/components/Header.astro</code>
-    </li>
-    <li>
-      {t("home.p3.4")}
-      <code>src/components/Footer.astro</code>
-    </li>
-    <li>{t("home.p3.5")} <code>src/pages/blog/</code></li>
-    <li>
-      {t("home.p3.6")}
-      <code>src/layouts/Layout.astro</code>
-    </li>
-    <li>
-      {t("home.p3.7")}
-      <code>src/layouts/BlogPost.astro</code>
-    </li>
-  </ul>
+  <section class="text-center bg-gray-100 py-10">
+    <h1 class="text-4xl font-bold text-blue-700 mb-4">
+      {t("wellcome.text")}
+    </h1>
+    <p class="text-gray-700 text-lg leading-relaxed mx-auto max-w-xl">
+      {t("wellcome1.text")}
+    </p>
+  </section>
+
+  <section class="mt-10 px-4">
+    <h2 class="text-3xl font-semibold text-blue-700 mb-6 text-center">
+      {t("nav.products")}
+    </h2>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 transform hover:-translate-y-1">
+        <h3 class="font-semibold text-xl text-blue-600 mb-2">Education</h3>
+        <ul class="list-disc list-inside text-gray-600 mt-2">
+          <li>
+            <a href="https://wikischool.asia" class="text-blue-600 hover:underline">
+              Kindergarten & K12
+            </a>
+          </li>
+          <li>University Solution: Wiki College</li>
+          <li>Enrollment</li>
+        </ul>
+      </div>
+
+      <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 transform hover:-translate-y-1">
+        <h3 class="font-semibold text-xl text-blue-600 mb-2">Enterprise</h3>
+        <ul class="list-disc list-inside text-gray-600 mt-2">
+          <li>
+            <a href="https://vithean.com" class="text-blue-600 hover:underline">
+              Vithean Page
+            </a>
+          </li>
+          <li>Attendance / Card / Device</li>
+          <li>HRM Solution</li>
+        </ul>
+      </div>
+
+      <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 transform hover:-translate-y-1">
+        <h3 class="font-semibold text-xl text-blue-600 mb-2">Custom Solution</h3>
+        <p class="text-gray-600 mt-2">Details about custom solutions...</p>
+      </div>
+
+      <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 transform hover:-translate-y-1">
+        <h3 class="font-semibold text-xl text-blue-600 mb-2">Outsourcing</h3>
+        <p class="text-gray-600 mt-2">Details about outsourcing services...</p>
+      </div>
+    </div>
+  </section>
 </Layout>

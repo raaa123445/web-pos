@@ -1,108 +1,125 @@
 export const ui = {
+  km: {
+    "site.title": "ទំព័រដើម",
+    "site.description": "សូមស្វាគមន៍មកកាន់គេហទំព័ររបស់ខ្ញុំ!",
+    "wellcome.text": "POSCAR Digital Co., LTD.",
+    "home.welcome": "សូមស្វាគមន៍មកកាន់គេហទំព័ររបស់ខ្ញុំ!",
+    "wellcome1.text": "ដើម្បីបង្កើតវេទិកាអេកូឌីជីថលពេញលេញ POSCAR Digital គឺជាក្រុមហ៊ុនឈានមុខគេមួយនៅក្នុងប្រព័ន្ធឆ្លាតវៃក្នុងការអប់រំ គណនេយ្យ ការចូលរួម និងដំណោះស្រាយ ERP ផ្សេងទៀត។",
+    "about.title": "អំពីខ្ញុំ",
+    "about.description": "ខ្ញុំជាអ្នកអភិវឌ្ឍវេបសាយ ហើយខ្ញុំចូលចិត្ត Astro!",
+    "about.text": `សួស្ដី`,
+    "home.p1": `សូមស្វាគមន៍មកកាន់គំរូប្លុកចាប់ផ្តើមផ្លូវការនេះ...`,
+    "home.p2": `គំរូនេះមានការរួមបញ្ចូលចំណុចផ្សេងៗដែលបានកំណត់រួចនៅក្នុងឯកសារ <code>astro.config.mjs</code> របស់អ្នក...`,
+    "home.p3": "នេះគឺជាគំនិតមួយចំនួនសម្រាប់ចាប់ផ្តើមជាមួយគំរូនេះ៖",
+    "home.p3.0": "គ្រប់គ្រងការបកប្រែនៅក្នុង",
+    "home.p3.1": "កែប្រែទំព័រនេះនៅក្នុង",
+    "home.p3.2": "កែប្រែទំព័របកប្រែនៅក្នុង",
+    "home.p3.3": "កែប្រែធាតុបឋមនៃគេហទំព័រនៅក្នុង",
+    "home.p3.4": "បន្ថែមឈ្មោះរបស់អ្នកទៅនឹងជើងទំព័រនៅក្នុង",
+    "home.p3.5": "សូមពិនិត្យមើលអត្ថបទប្លុកនៅក្នុងភាសា ES, EN និង FR នៅក្នុង",
+    "home.p3.6": "ប្តូរទំហំគេហទំព័រទូទៅនៅក្នុង",
+    "home.p3.7": "ប្តូរទំហំទំព័រអត្ថបទប្លុកនៅក្នុង",
+
+    // herder khmer...
+    "nav.home": "ទំព័រដើម",
+    "nav.products": "ផលិតផល & សេវាកម្ម",
+    "nav.education": "ការអប់រំ",
+    "nav.enterprise": "សហគ្រាស",
+    "nav.custom": "ដោះស្រាយដោយខ្លួនឯង",
+    "nav.outsourcing": "ការបញ្ជូនចេញ",
+    "nav.about": "អំពីយើង",
+    "nav.blogs": "ប្លក់",
+    "nav.contact": "ទាក់ទង​មក​ពួកយើង",
+    "nav.k12": "គុណភាពនិង K12",
+    "nav.university": "ដំណោះស្រាយនៃសាកលវិទ្យាល័យ: វិគី កាលិច",
+    "nav.enrollment": "ការចុះឈ្មោះ",
+    "nav.companyProfile": "មុខសញ្ញាក្រុមហ៊ុន",
+    "nav.ourCustomers": "អតិថិជនរបស់យើង",
+    "nav.legal": "ច្បាប់",
+    "nav.privacy": "ភាពឯកជន",
+    "nav.terms": "ល័ក្ខខ័ណ្ឌ",
+    "nav.vithean": "ទំព័រ Vithean",
+    "nav.attendance": "ការចុះឈ្មោះ / កាត / ឧបករណ៍",
+    "nav.hrm": "ដំណោះស្រាយ HRM",
+
+    // footer khmer...
+    "footer.privacy": "គោលការណ៍ភាពឯកជន",
+    "footer.terms": "ល័ក្ខខ័ណ្ឌសេវាកម្ម",
+    "footer.contact": "ទាក់ទង​មក​ពួកយើង",
+    "footer.facebook": "ហ្វេសប៊ុក",
+    "footer.twitter": "ត្វីតធឺ",
+    "footer.instagram": "អ៊ីនស្តាក្រាម",
+    "footer.rights": "រក្សាសិទ្ធិគ្រប់យ៉ាង។",
+    
+
+    page: "ទំព័រ",
+    "blog.title": "ប្លក់",
+    "blog.description": "ប្លុក",
+    "pagination.first": "ទីមួយ",
+    "pagination.prev": "មុន",
+    "pagination.next": "បន្ទាប់",
+    "pagination.last": "ចុងក្រោយ",
+    "pagination.page": "ទំព័រ",
+  },
   en: {
-    "site.title": "Astro Blog",
+    "site.title": "Home",
     "site.description": "Welcome to my website!",
-    "nav.home": "Home",
-    "nav.about": "About",
-    "nav.twitter": "Twitter",
+    "wellcome.text": "POSCAR Digital Co., LTD.",
+    "wellcome1.text": "To establish a complete digital eco-platform POSCAR Digital is one of the leading company in smart system in education, accounting, attendance and other ERP solutions.",
     "home.welcome": "Welcome to my website",
-    "about.title": "About me",
-    "about.description": "I'm a web developer and I love Astro!",
-    "about.text": `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-		labore et dolore magna aliqua. Vitae ultricies leo integer malesuada nunc vel risus commodo
-		viverra. Adipiscing enim eu turpis egestas pretium. Euismod elementum nisi quis eleifend quam
-		adipiscing. In hac habitasse platea dictumst vestibulum. Sagittis purus sit amet volutpat. Netus
-		et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus
-		vestibulum lorem. Varius sit amet mattis vulputate enim. Habitasse platea dictumst quisque
-		sagittis. Integer quis auctor elit sed vulputate mi. Dictumst quisque sagittis purus sit amet.`,
-    "home.p1": `Welcome to the official blog starter template. This template serves as a
-    lightweight, minimally-styled starting point for anyone looking to build a
-    personal website, blog, or portfolio with Astro.`,
-    "home.p2": `This template comes with a few integrations already configured in your
-    <code>astro.config.mjs</code> file. You can customize your setup with
-    <a href="https://astro.build/integrations">Astro Integrations</a> to add
-    tools like Tailwind, React, or Vue to your project.`,
-    "home.p3": "Here are a few ideas on how to get started with the template:",
-    "home.p3.0": "Handle translations in",
+    "about.title": "About Me",
+    "about.description": "I am a web developer and I love Astro!",
+    "about.text": `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...`,
+    "home.p1": `Welcome to this official starting blog template...`,
+    "home.p2": `This template includes various points that have been set in your <code>astro.config.mjs</code> file...`,
+    "home.p3": "Here are some ideas to get started with this template:",
+    "home.p3.0": "Manage translations in",
     "home.p3.1": "Edit this page in",
-    "home.p3.2": "Edit translated pages in",
-    "home.p3.3": "Edit the site header items in",
+    "home.p3.2": "Edit the translation page in",
+    "home.p3.3": "Edit the main element of the website in",
     "home.p3.4": "Add your name to the footer in",
-    "home.p3.5":
-      "Check out the included blog posts in languages ES, EN and FR in",
-    "home.p3.6": "Customize the general site layout in",
-    "home.p3.7": "Customize the blog post page layout in",
+    "home.p3.5": "Check out the blog posts in ES, EN, and FR in",
+    "home.p3.6": "Change the overall website size in",
+    "home.p3.7": "Change the blog post text size in",
+
+    // Header english...
+    "nav.home": "Home",
+    "nav.products": "Products & Services",
+    "nav.education": "Education",
+    "nav.enterprise": "Enterprise",
+    "nav.custom": "Custom Solution",
+    "nav.outsourcing": "Outsourcing",
+    "nav.about": "About Us",
+    "nav.blogs": "Blogs",
+    "nav.contact": "Contact Us",
+    "nav.k12": "Kindergarten & K12",
+    "nav.university": "University Solution: Wiki College",
+    "nav.enrollment": "Enrollment",
+    "nav.companyProfile": "Company Profile",
+    "nav.ourCustomers": "Our Customers",
+    "nav.legal": "Legal",
+    "nav.privacy": "Privacy",
+    "nav.terms": "Terms and Conditions",
+    "nav.vithean": "Vithean Page",
+    "nav.attendance": "Attendance / Card / Device",
+    "nav.hrm": "HRM Solution",
+
+    // footer english...
+    "footer.privacy": "Privacy Policy",
+    "footer.terms": "Terms of Service",
+    "footer.contact": "Contact Us",
+    "footer.facebook": "Facebook",
+    "footer.twitter": "Twitter",
+    "footer.instagram": "Instagram",
+    "footer.rights": "All rights reserved.",
+
     page: "Page",
-    "pagination.firts": "First",
+    "blog.title":"Blog",
+    "blog.description": "Blogs",
+    "pagination.first": "First",
     "pagination.prev": "Previous",
     "pagination.next": "Next",
     "pagination.last": "Last",
-  },
-  fr: {
-    "site.title": "Astro Blog",
-    "site.description": "Bienvenue sur mon site web !",
-    "nav.home": "Accueil",
-    "nav.about": "À propos",
-    "home.welcome": "Bienvenue sur mon site web",
-    "about.title": "À propos de moi",
-    "about.description": "Je suis un développeur web et j'adore Astro !",
-    "about.text": `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-		labore et dolore magna aliqua. Vitae ultricies leo integer malesuada nunc vel risus commodo
-		viverra. Adipiscing enim eu turpis egestas pretium. Euismod elementum nisi quis eleifend quam
-		adipiscing. In hac habitasse platea dictumst vestibulum. Sagittis purus sit amet volutpat. Netus
-		et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus
-		vestibulum lorem. Varius sit amet mattis vulputate enim. Habitasse platea dictumst quisque
-		sagittis. Integer quis auctor elit sed vulputate mi. Dictumst quisque sagittis purus sit amet.`,
-    "home.p1": `Bienvenue sur le modèle de démarrage du blog officiel. Ce modèle sert de point de départ léger et minimaliste pour toute personne souhaitant créer un site web personnel, un blog ou un portfolio avec Astro.`,
-    "home.p2": `Ce modèle est livré avec quelques intégrations déjà configurées dans votre fichier <code>astro.config.mjs</code>. Vous pouvez personnaliser votre configuration avec <a href="https://astro.build/integrations">Astro Integrations</a> pour ajouter des outils comme Tailwind, React ou Vue à votre projet.`,
-    "home.p3": "Voici quelques idées pour commencer avec le modèle :",
-    "home.p3.0": "Gérer les traductions dans",
-    "home.p3.1": "Modifier cette page dans",
-    "home.p3.2": "Modifier les pages traduites dans",
-    "home.p3.3": "Modifier les éléments de l'en-tête du site dans",
-    "home.p3.4": "Ajouter votre nom au pied de page dans",
-    "home.p3.5": "Découvrez les articles de blog inclus en ES, EN et FR dans",
-    "home.p3.6": "Personnalisez la mise en page générale du site dans",
-    "home.p3.7":
-      "Personnalisez la mise en page de la page des articles de blog dans",
-    page: "Page",
-    "pagination.firts": "Premier",
-    "pagination.prev": "Précédent",
-    "pagination.next": "Suivant",
-    "pagination.last": "Dernier",
-  },
-  es: {
-    "site.title": "Astro Blog",
-    "site.description": "Bienvenido a mi sitio web!",
-    "nav.home": "Inicio",
-    "nav.about": "Quien soy",
-    "home.welcome": "Bienvenido a mi sitio web",
-    "about.title": "Sobre mi",
-    "about.description": "Soy un desarrollador web y me encanta Astro!",
-    "about.text": `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-		labore et dolore magna aliqua. Vitae ultricies leo integer malesuada nunc vel risus commodo
-		viverra. Adipiscing enim eu turpis egestas pretium. Euismod elementum nisi quis eleifend quam
-		adipiscing. In hac habitasse platea dictumst vestibulum. Sagittis purus sit amet volutpat. Netus
-		et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus
-		vestibulum lorem. Varius sit amet mattis vulputate enim. Habitasse platea dictumst quisque
-		sagittis. Integer quis auctor elit sed vulputate mi. Dictumst quisque sagittis purus sit amet.`,
-    "home.p1": `Bienvenido a la plantilla de inicio de blog oficial. Esta plantilla sirve como punto de partida ligero y con estilo mínimo para cualquiera que quiera construir un sitio web personal, un blog o un portafolio con Astro.`,
-    "home.p2": `Esta plantilla viene con algunas integraciones ya configuradas en su archivo <code>astro.config.mjs</code>. Puede personalizar su configuración con <a href="https://astro.build/integrations">Astro Integrations</a> para agregar herramientas como Tailwind, React o Vue a su proyecto.`,
-    "home.p3": "Aquí hay algunas ideas sobre cómo comenzar con la plantilla:",
-    "home.p3.0": "Maneje las traducciones en",
-    "home.p3.1": "Edite esta página en",
-    "home.p3.2": "Editar páginas traducidas en",
-    "home.p3.3": "Edite los elementos de encabezado del sitio en",
-    "home.p3.4": "Agregue su nombre al pie de página en",
-    "home.p3.5":
-      "Consulte las publicaciones de blog incluidas en idiomas ES, EN y FR en",
-    "home.p3.6": "Personalice el diseño general del sitio en",
-    "home.p3.7":
-      "Personalice el diseño de la página de publicación del blog en",
-    page: "Página",
-    "pagination.firts": "Primero",
-    "pagination.prev": "Anterior",
-    "pagination.next": "Siguiente",
-    "pagination.last": "Último",
+    "pagination.page": "Page",
   },
 } as const;

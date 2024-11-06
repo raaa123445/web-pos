@@ -4,17 +4,17 @@ import FormattedDate from "../../../components/FormattedDate.astro";
 import Layout from "../../../layouts/Layout.astro";
 import { useTranslations } from "../../../i18n/utils";
 
+// Retrieve the current language and translations
 const { lang } = Astro.params;
 const t = useTranslations(lang);
 
 export async function getStaticPaths({ paginate }) {
-  const PAGE_SIZE = 2;
+  const PAGE_SIZE = 2; // Adjust page size as needed
   const _posts = await getBlogPosts();
-  return ["en", "fr", "es"].flatMap((lang) => {
+
+  return ["en", "km"].flatMap((lang) => {
     const posts_filtered = _posts
-      ?.filter((blog) => {
-        return blog?.data?.lang === lang;
-      })
+      .filter((blog) => blog?.data?.lang === lang)
       .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
     return paginate(posts_filtered, { params: { lang }, pageSize: PAGE_SIZE });
   });
@@ -23,7 +23,7 @@ export async function getStaticPaths({ paginate }) {
 const { page } = Astro.props;
 ---
 
-<Layout title="Blog" description="Blog" lang={lang}>
+<Layout title={t("blog.title")} description={t("blog.description")} lang={lang}>
   <style>
     main {
       width: 960px;
@@ -134,69 +134,58 @@ const { page } = Astro.props;
       font-weight: bold;
     }
   </style>
+
   <section id="posts-list">
     <ul>
-      {
-        page.data.map((post) => {
-          return (
-            <li>
-              <a href={`/${lang}/blog/${post.blog_slug}`}>
-                <img
-                  width={720}
-                  height={360}
-                  src={post.data.heroImage}
-                  alt=""
-                />
-                <h4 class="title">{post.data.title}</h4>
-                <p class="date">
-                  <FormattedDate date={post.data.pubDate} />
-                </p>
-              </a>
-            </li>
-          );
-        })
-      }
+      {page.data.map((post) => (
+        <li key={post.blog_slug}>
+          <a href={`/${lang}/blog/${post.blog_slug}`}>
+            <img width={720} height={360} src={post.data.heroImage} alt="" />
+            <h4 class="title">{post.data.title}</h4>
+            <p class="date">
+              <FormattedDate date={post.data.pubDate} />
+            </p>
+          </a>
+        </li>
+      ))}
     </ul>
+
     <div class="pagination">
-      {
-        page.url.first ? (
-          <a href={page.url.first} class="page-link first-page">
-            {t("pagination.firts")}
-          </a>
-        ) : (
-          <span class="disabled">{t("pagination.firts")}</span>
-        )
-      }
-      {
-        page.url.prev ? (
-          <a href={page.url.prev} class="page-link prev-page">
-            {t("pagination.prev")}
-          </a>
-        ) : (
-          <span class="disabled">{t("pagination.prev")}</span>
-        )
-      }
-      <span class="current-page"
-        >{t("page")} {page.currentPage}/{page.lastPage}</span
-      >
-      {
-        page.url.next ? (
-          <a href={page.url.next} class="page-link next-page">
-            {t("pagination.next")}
-          </a>
-        ) : (
-          <span class="disabled">{t("pagination.next")}</span>
-        )
-      }
-      {
-        page.url.last ? (
-          <a href={page.url.last} class="page-link last-page">
-            {t("pagination.last")}
-          </a>
-        ) : (
-          <span class="disabled">{t("pagination.last")}</span>
-        )
-      }
+      {page.url.first ? (
+        <a href={page.url.first} class="page-link first-page">
+          {t("pagination.first")}
+        </a>
+      ) : (
+        <span class="disabled">{t("pagination.first")}</span>
+      )}
+
+      {page.url.prev ? (
+        <a href={page.url.prev} class="page-link prev-page">
+          {t("pagination.prev")}
+        </a>
+      ) : (
+        <span class="disabled">{t("pagination.prev")}</span>
+      )}
+
+      <span class="current-page">
+        {t("pagination.page")} {page.currentPage}/{page.lastPage}
+      </span>
+
+      {page.url.next ? (
+        <a href={page.url.next} class="page-link next-page">
+          {t("pagination.next")}
+        </a>
+      ) : (
+        <span class="disabled">{t("pagination.next")}</span>
+      )}
+
+      {page.url.last ? (
+        <a href={page.url.last} class="page-link last-page">
+          {t("pagination.last")}
+        </a>
+      ) : (
+        <span class="disabled">{t("pagination.last")}</span>
+      )}
     </div>
   </section>
 </Layout>
