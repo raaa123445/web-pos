@@ -1,5 +1,6 @@
 export const ui = {
   km: {
+    //Home Page khmer
     "site.title": "ទំព័រដើម",
     "site.description": "សូមស្វាគមន៍មកកាន់គេហទំព័ររបស់ខ្ញុំ!",
     "wellcome.text": "POSCAR Digital Co., LTD.",
@@ -51,7 +52,7 @@ export const ui = {
     "footer.instagram": "អ៊ីនស្តាក្រាម",
     "footer.rights": "រក្សាសិទ្ធិគ្រប់យ៉ាង។",
     
-
+    // Blog Khmer
     page: "ទំព័រ",
     "blog.title": "ប្លក់",
     "blog.description": "ប្លុក",
@@ -62,6 +63,7 @@ export const ui = {
     "pagination.page": "ទំព័រ",
   },
   en: {
+    // home page english
     "site.title": "Home",
     "site.description": "Welcome to my website!",
     "wellcome.text": "POSCAR Digital Co., LTD.",
@@ -113,6 +115,7 @@ export const ui = {
     "footer.instagram": "Instagram",
     "footer.rights": "All rights reserved.",
 
+    // Blog englsh
     page: "Page",
     "blog.title":"Blog",
     "blog.description": "Blogs",

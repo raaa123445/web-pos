@@ -3,8 +3,8 @@ import { ui } from "../i18n/ui";
 
 // Define available languages
 export const LANGUAGES = {
-  en: "English",
-  km: "Khmer",
+  en: "EN",
+  km: "ខ្មែរ",
 };
 
 // Type for language keys

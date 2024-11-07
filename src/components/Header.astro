@@ -1,12 +1,15 @@
 ---
+// Import necessary components and utilities
 import HeaderLink from "./HeaderLink.astro";
 import { SITE_TITLE } from "../consts";
 import LangLink from "./LangLink.astro";
-import { getLangFromUrl, useTranslations } from "../i18n/utils";
+import { getLangFromUrl, useTranslations, LANGUAGES } from "../i18n/utils";
 
+// Extract `lang` prop and translation function
 const { lang } = Astro.props;
 const t = useTranslations(lang);
 
+// Define URLs for each navigation link based on the selected language
 const homeSlug = `/${lang || ""}`;
 const productsSlug = `/${lang || ""}/products-services`;
 const educationSlug = `/${lang || ""}/education`;
@@ -24,6 +27,7 @@ const contactSlug = `/${lang || ""}/contact`;
       <a href="/"><img src="../../public/images/po.png" alt="Site Logo" class="w-12 h-auto mr-2" /></a>
       <a href="/" class="text-white font-bold text-xl hover:text-blue-300">{SITE_TITLE}</a>
     </h2>
+
     <div class="flex items-center space-x-6 flex-wrap">
       <HeaderLink href={homeSlug} class="text-white hover:text-blue-300">{t("nav.home")}</HeaderLink>
 
@@ -65,8 +69,9 @@ const contactSlug = `/${lang || ""}/contact`;
     </div>
 
     <div class="flex space-x-2 text-white">
-      <LangLink language="en" isActive={lang == "en"} />
-      <LangLink language="km" isActive={lang == "km"} />
+      <LangLink language="en" label={LANGUAGES["en"]} isActive={lang === "en"} />
+      <span>|</span> <!-- Divider -->
+      <LangLink language="km" label={LANGUAGES["km"]} isActive={lang === "km"} />
     </div>
 
     <div class="flex space-x-2">

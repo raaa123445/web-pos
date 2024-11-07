@@ -2,16 +2,17 @@ import { defineConfig } from 'astro/config';
 import mdx from '@astrojs/mdx';
 
 import sitemap from '@astrojs/sitemap';
+import vue from '@astro/vue';
 
-// https://astro.build/config
 export default defineConfig({
 	site: 'https://example.com',
 	vite: {
-		server: {
-			watch: {
-				usePolling: true,
-			}
-		}
+	  server: {
+		watch: {
+		  usePolling: true,
+		},
+	  },
 	},
-	integrations: [mdx(), sitemap()],
-});
+	integrations: [mdx(), sitemap(), vue()],
+  });
+  

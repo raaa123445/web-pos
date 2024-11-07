@@ -2,20 +2,28 @@
 import type { HTMLAttributes } from "astro/types";
 import { getLocalizedPathname } from "../i18n/utils";
 
+// Importing LANGUAGES object for full language names
+import { LANGUAGES } from "../i18n/utils";
+
 type Props = HTMLAttributes<"a">;
 
+// Destructure props and get the current language and pathname
 const { language, class: className, ...props } = Astro.props;
 const { pathname } = Astro.url;
 
+// Determine active language and set the label to display full language name
 const lang = Astro.params?.lang || "en";
 const isActive = language === lang;
+const label = LANGUAGES[language] || language; // Use full language name if available
 
+// Generate localized href based on selected language
 const href = getLocalizedPathname(pathname, language);
 ---
 
 <a href={href} class:list={[className, { active: isActive }]} {...props}>
-  {language}
+  {label}
 </a>
+
 <style>
   a {
     display: inline-block;
